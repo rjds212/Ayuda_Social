@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Causa - Transformando Futuros en Venezuela</title>
+    <title data-translate-key="page_title">Nuestra Causa - Transformando Futuros en Venezuela</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -70,16 +70,20 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">Causa<span class="text-yellow-400">Infantil</span></a>
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#mision" class="text-white font-semibold hover:text-yellow-300 transition duration-300">Misión</a>
-                <a href="#casos" class="text-white font-semibold hover:text-yellow-300 transition duration-300">Casos de Ayuda</a>
-                <a href="#transparencia" class="text-white font-semibold hover:text-yellow-300 transition duration-300">Transparencia</a>
-                <a href="#quienes-somos" class="text-white font-semibold hover:text-yellow-300 transition duration-300">Quiénes Somos</a>
+                <a href="#mision" class="text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_mission">Misión</a>
+                <a href="#casos" class="text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_cases">Casos de Ayuda</a>
+                <a href="#transparencia" class="text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_transparency">Transparencia</a>
+                <a href="#quienes-somos" class="text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_about">Quiénes Somos</a>
             </div>
             <div class="hidden md:flex items-center space-x-4">
+                <!-- NEW: Language Switcher -->
+                <button id="lang-switcher-desktop" class="text-white hover:text-yellow-300 transition duration-300">
+                    <i class="fas fa-globe text-xl"></i>
+                </button>
                 <button id="share-button-desktop" class="text-white hover:text-yellow-300 transition duration-300">
                     <i class="fas fa-share-alt text-xl"></i>
                 </button>
-                <a href="#donar" class="px-6 py-2 rounded-full font-semibold transition duration-300 bg-yellow-500 text-white hover:bg-yellow-600 shadow-lg">Donar Ahora</a>
+                <a href="#donar" class="px-6 py-2 rounded-full font-semibold transition duration-300 bg-yellow-500 text-white hover:bg-yellow-600 shadow-lg" data-translate-key="nav_donate">Donar Ahora</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
                 <i class="fas fa-bars"></i>
@@ -87,14 +91,18 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-4">
-            <a href="#mision" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300">Misión</a>
-            <a href="#casos" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300">Casos de Ayuda</a>
-            <a href="#transparencia" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300">Transparencia</a>
-            <a href="#quienes-somos" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300">Quiénes Somos</a>
+            <a href="#mision" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_mission_mobile">Misión</a>
+            <a href="#casos" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_cases_mobile">Casos de Ayuda</a>
+            <a href="#transparencia" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_transparency_mobile">Transparencia</a>
+            <a href="#quienes-somos" class="block text-center text-white font-semibold hover:text-yellow-300 transition duration-300" data-translate-key="nav_about_mobile">Quiénes Somos</a>
             <button id="share-button-mobile" class="w-full text-center py-2 text-white font-semibold bg-gray-700 rounded-full hover:bg-gray-600 transition duration-300">
-                <i class="fas fa-share-alt mr-2"></i>Compartir Página
+                <i class="fas fa-share-alt mr-2"></i><span data-translate-key="share_page_mobile">Compartir Página</span>
             </button>
-            <a href="#donar" class="block text-center w-full mt-2 px-8 py-3 rounded-full font-semibold transition duration-300 bg-yellow-500 text-white hover:bg-yellow-600 shadow-lg">Donar Ahora</a>
+            <!-- NEW: Language switcher for mobile -->
+            <button id="lang-switcher-mobile" class="w-full text-center py-2 text-white font-semibold bg-gray-700 rounded-full hover:bg-gray-600 transition duration-300">
+                <i class="fas fa-globe mr-2"></i><span data-translate-key="change_lang_mobile">Cambiar Idioma</span>
+            </button>
+            <a href="#donar" class="block text-center w-full mt-2 px-8 py-3 rounded-full font-semibold transition duration-300 bg-yellow-500 text-white hover:bg-yellow-600 shadow-lg" data-translate-key="nav_donate_mobile">Donar Ahora</a>
         </div>
     </header>
 
@@ -106,11 +114,11 @@
             Tu navegador no soporta la etiqueta de video.
         </video>
         <div class="container mx-auto px-6 z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">Tu Ayuda, Su Futuro.</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up text-justify">Creamos puentes de esperanza para niños en comunidades vulnerables de Venezuela, entregando útiles, uniformes y apoyo médico.</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down" data-translate-key="hero_title">Tu Ayuda, Su Futuro.</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up text-justify" data-translate-key="hero_subtitle">Creamos puentes de esperanza para niños en comunidades vulnerables de Venezuela, entregando útiles, uniformes y apoyo médico.</p>
             <div class="space-x-4 animate-fade-in-up">
-                <a href="#donar" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-yellow-500 text-white hover:bg-yellow-600 shadow-lg">Quiero Ayudar</a>
-                <a href="#casos" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900">Ver Casos</a>
+                <a href="#donar" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-yellow-500 text-white hover:bg-yellow-600 shadow-lg" data-translate-key="hero_cta1">Quiero Ayudar</a>
+                <a href="#casos" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900" data-translate-key="hero_cta2">Ver Casos</a>
             </div>
         </div>
     </section>
@@ -119,20 +127,20 @@
         <!-- ===== Misión y Visión Section ===== -->
         <section id="mision" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title"><strong>Nuestra Razón de Ser</strong></h2>
-                <p class="section-subtitle">Creemos en el poder de la acción directa y la transparencia para generar un cambio real y duradero en la vida de los niños.</p>
+                <h2 class="section-title"><strong data-translate-key="mission_title">Nuestra Razón de Ser</strong></h2>
+                <p class="section-subtitle" data-translate-key="mission_subtitle">Creemos en el poder de la acción directa y la transparencia para generar un cambio real y duradero en la vida de los niños.</p>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="reveal">
                         <img src="https://i.imgur.com/b6H58TD.jpeg" alt="[Imagen de Misión]" class="rounded-lg shadow-xl w-full">
                     </div>
                     <div class="space-y-8 reveal">
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center"><i class="fas fa-bullseye text-blue-500 mr-3"></i>Nuestra Misión</h3>
-                            <p class="text-justify">Conectar la generosidad de personas de todo el mundo con las necesidades específicas y urgentes de niños en comunidades vulnerables de Venezuela, garantizando que cada contribución en útiles, uniformes o ayuda médica se entregue de manera directa y transparente.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center"><i class="fas fa-bullseye text-blue-500 mr-3"></i><span data-translate-key="our_mission_title">Nuestra Misión</span></h3>
+                            <p class="text-justify" data-translate-key="our_mission_text">Conectar la generosidad de personas de todo el mundo con las necesidades específicas y urgentes de niños en comunidades vulnerables de Venezuela, garantizando que cada contribución en útiles, uniformes o ayuda médica se entregue de manera directa y transparente.</p>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center"><i class="fas fa-eye text-green-500 mr-3"></i>Nuestra Visión</h3>
-                            <p class="text-justify">Ser un referente de confianza y eficacia en la ayuda social, donde cada niño tenga la oportunidad de desarrollar su potencial sin que la falta de recursos básicos sea un obstáculo, construyendo un futuro más justo y esperanzador para Venezuela, un niño a la vez.</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center"><i class="fas fa-eye text-green-500 mr-3"></i><span data-translate-key="our_vision_title">Nuestra Visión</span></h3>
+                            <p class="text-justify" data-translate-key="our_vision_text">Ser un referente de confianza y eficacia en la ayuda social, donde cada niño tenga la oportunidad de desarrollar su potencial sin que la falta de recursos básicos sea un obstáculo, construyendo un futuro más justo y esperanzador para Venezuela, un niño a la vez.</p>
                         </div>
                     </div>
                 </div>
@@ -142,34 +150,32 @@
         <!-- ===== Casos de Ayuda Section ===== -->
         <section id="casos" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="section-title"><strong>Historias que necesitan tu ayuda</strong></h2>
-                <p class="section-subtitle">Cada niño tiene un nombre, un sueño y una necesidad. Conoce sus historias y sé parte de la solución.</p>
+                <h2 class="section-title"><strong data-translate-key="cases_title">Historias que necesitan tu ayuda</strong></h2>
+                <p class="section-subtitle" data-translate-key="cases_subtitle">Cada niño tiene un nombre, un sueño y una necesidad. Conoce sus historias y sé parte de la solución.</p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Caso 1 -->
+                    <!-- Case examples will be translated via JS if needed -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 reveal">
                         <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Historia+de+Luis" alt="[Imagen de Luis]" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">Útiles para Luis</h3>
-                            <p class="mb-4 text-justify">Luis, de 8 años, sueña con ser ingeniero, pero no tiene los cuadernos ni lápices para ir a la escuela. Ayúdalo a seguir aprendiendo.</p>
-                            <a href="#donar" class="text-blue-600 font-semibold hover:underline">Donar para este caso <i class="fas fa-arrow-right ml-1"></i></a>
+                            <h3 class="text-2xl font-bold mb-2" data-translate-key="case1_title">Útiles para Luis</h3>
+                            <p class="mb-4 text-justify" data-translate-key="case1_text">Luis, de 8 años, sueña con ser ingeniero, pero no tiene los cuadernos ni lápices para ir a la escuela. Ayúdalo a seguir aprendiendo.</p>
+                            <a href="#donar" class="text-blue-600 font-semibold hover:underline" data-translate-key="case_donate_link">Donar para este caso <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
-                    <!-- Caso 2 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 reveal">
                         <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Historia+de+Ana" alt="[Imagen de Ana]" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">Uniformes para Ana</h3>
-                            <p class="mb-4 text-justify">Ana, de 6 años, no puede asistir a clases porque no tiene el uniforme escolar requerido. Una pequeña ayuda le abrirá las puertas del colegio.</p>
-                            <a href="#donar" class="text-blue-600 font-semibold hover:underline">Donar para este caso <i class="fas fa-arrow-right ml-1"></i></a>
+                            <h3 class="text-2xl font-bold mb-2" data-translate-key="case2_title">Uniformes para Ana</h3>
+                            <p class="mb-4 text-justify" data-translate-key="case2_text">Ana, de 6 años, no puede asistir a clases porque no tiene el uniforme escolar requerido. Una pequeña ayuda le abrirá las puertas del colegio.</p>
+                            <a href="#donar" class="text-blue-600 font-semibold hover:underline" data-translate-key="case_donate_link2">Donar para este caso <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
-                    <!-- Caso 3 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 reveal">
                         <img src="https://placehold.co/600x400/EF4444/FFFFFF?text=Historia+de+Carlos" alt="[Imagen de Carlos]" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">Ayuda Médica para Carlos</h3>
-                            <p class="mb-4 text-justify">Carlos, de 10 años, necesita un tratamiento médico para su asma que su familia no puede costear. Ayúdalo a respirar mejor y jugar sin límites.</p>
-                            <a href="#donar" class="text-blue-600 font-semibold hover:underline">Donar para este caso <i class="fas fa-arrow-right ml-1"></i></a>
+                            <h3 class="text-2xl font-bold mb-2" data-translate-key="case3_title">Ayuda Médica para Carlos</h3>
+                            <p class="mb-4 text-justify" data-translate-key="case3_text">Carlos, de 10 años, necesita un tratamiento médico para su asma que su familia no puede costear. Ayúdalo a respirar mejor y jugar sin límites.</p>
+                            <a href="#donar" class="text-blue-600 font-semibold hover:underline" data-translate-key="case_donate_link3">Donar para este caso <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -179,23 +185,23 @@
         <!-- ===== Transparencia Section ===== -->
         <section id="transparencia" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title"><strong>Tu Ayuda en Acción</strong></h2>
-                <p class="section-subtitle">La confianza es nuestro pilar. Aquí puedes ver exactamente cómo cada donación se convierte en una sonrisa y una oportunidad.</p>
+                <h2 class="section-title"><strong data-translate-key="transparency_title">Tu Ayuda en Acción</strong></h2>
+                <p class="section-subtitle" data-translate-key="transparency_subtitle">La confianza es nuestro pilar. Aquí puedes ver exactamente cómo cada donación se convierte en una sonrisa y una oportunidad.</p>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6 reveal">
-                        <h3 class="text-2xl font-bold text-gray-800"> Ayudas Sociales - Julio 2025</h3>
-                        <p class="text-justify">Gracias a 2 donantes, logramos reparar un techo de un hogar donde viven 3 niños en una comunidad de Ciudad Bolívar. Ahora pueden dormir bajo un techo mas seguro.</p>
+                        <h3 class="text-2xl font-bold text-gray-800" data-translate-key="transparency_case_title">Ayudas Sociales - Julio 2025</h3>
+                        <p class="text-justify" data-translate-key="transparency_case_text">Gracias a 2 donantes, logramos reparar un techo de un hogar donde viven 3 niños en una comunidad de Ciudad Bolívar. Ahora pueden dormir bajo un techo mas seguro.</p>
                         <div class="bg-gray-100 p-4 rounded-lg">
-                            <p class="font-bold">Total Recaudado: Unicamente Materiales.</p>
-                            <p>Inversión: Mano de Obra</p>
+                            <p class="font-bold" data-translate-key="transparency_raised">Total Recaudado: Unicamente Materiales.</p>
+                            <p data-translate-key="transparency_investment">Inversión: Mano de Obra</p>
                         </div>
                     </div>
                     <div class="reveal">
                         <video controls class="rounded-lg shadow-xl w-full" poster="https://placehold.co/600x400/6366F1/FFFFFF?text=Video+de+Entrega">
                             <source src="movie.mp4" type="video/mp4">
-                            Tu navegador no soporta la etiqueta de video.
+                            Your browser does not support the video tag.
                         </video>
-                        <p class="text-center text-sm mt-2 text-gray-500">Video de la entrega de útiles en la comunidad.</p>
+                        <p class="text-center text-sm mt-2 text-gray-500" data-translate-key="transparency_video_caption">Video de la entrega de útiles en la comunidad.</p>
                     </div>
                 </div>
             </div>
@@ -204,37 +210,36 @@
         <!-- ===== Formas de Ayudar (Donar) Section ===== -->
         <section id="donar" class="py-20 bg-gray-800 text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Formas de Ayudar</h2>
-                <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Tu donación, sin importar el tamaño, tiene un impacto directo. Elige el método que prefieras. ¡Gracias por tu generosidad!</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-translate-key="donate_title">Formas de Ayudar</h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto" data-translate-key="donate_subtitle">Tu donación, sin importar el tamaño, tiene un impacto directo. Elige el método que prefieras. ¡Gracias por tu generosidad!</p>
                 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <!-- PayPal Card -->
                     <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center justify-center reveal">
                         <i class="fab fa-paypal text-5xl text-blue-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-2">Donar con PayPal</h3>
-                        <p class="mb-6 text-gray-300 text-center">Usa tu cuenta de PayPal o tarjeta de crédito/débito para donaciones internacionales.</p>
+                        <h3 class="text-2xl font-bold mb-2" data-translate-key="donate_paypal_title">Donar con PayPal</h3>
+                        <p class="mb-6 text-gray-300 text-center" data-translate-key="donate_paypal_text">Usa tu cuenta de PayPal o tarjeta de crédito/débito para donaciones internacionales.</p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_donations">
                             <input type="hidden" name="business" value="martinamericaunite@gmail.com">
-                            <input type="hidden" name="item_name" value="Donación para Causa Infantil">
+                            <input type="hidden" name="item_name" value="Donation to Causa Infantil">
                             <input type="hidden" name="currency_code" value="USD">
-                            <button type="submit" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-blue-500 text-white hover:bg-blue-400">Donar vía PayPal</button>
+                            <button type="submit" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-blue-500 text-white hover:bg-blue-400" data-translate-key="donate_paypal_button">Donar vía PayPal</button>
                         </form>
                     </div>
                     <!-- USDT Card -->
                     <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center justify-center reveal">
                         <i class="fas fa-coins text-5xl text-green-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-2">Donar con Cripto (USDT)</h3>
-                        <p class="mb-6 text-gray-300 text-center">Envía USDT (Tether) a través de la red TRC20. Bajas comisiones y sin intermediarios.</p>
-                        <button onclick="openUsdtModal()" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-green-500 text-white hover:bg-green-400">Obtener Dirección USDT</button>
+                        <h3 class="text-2xl font-bold mb-2" data-translate-key="donate_crypto_title">Donar con Cripto (USDT)</h3>
+                        <p class="mb-6 text-gray-300 text-center" data-translate-key="donate_crypto_text">Envía USDT (Tether) a través de la red TRC20. Bajas comisiones y sin intermediarios.</p>
+                        <button onclick="openUsdtModal()" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-green-500 text-white hover:bg-green-400" data-translate-key="donate_crypto_button">Obtener Dirección USDT</button>
                     </div>
                      <!-- Bolivares Card -->
                     <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center justify-center reveal">
                         <span class="text-6xl mb-4">🇻🇪</span>
-                        <h3 class="text-2xl font-bold mb-2">Transferencia en Bolívares</h3>
-                        <p class="mb-6 text-gray-300 text-center">Para transferencias en bolívares (Pago Móvil o bancaria), contacta para recibir los datos.</p>
-                        <!-- FIX: Added predefined message to WhatsApp link -->
-                        <a href="https://wa.me/584148581362?text=Hola%20quiero%20dar%20mi%20aporte%20social%20para%20los%20ni%C3%B1os" target="_blank" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-green-500 text-white hover:bg-green-600">
-                           <i class="fab fa-whatsapp mr-2"></i>Contactar por WhatsApp
+                        <h3 class="text-2xl font-bold mb-2" data-translate-key="donate_bs_title">Transferencia en Bolívares</h3>
+                        <p class="mb-6 text-gray-300 text-center" data-translate-key="donate_bs_text">Para transferencias en bolívares (Pago Móvil o bancaria), contacta para recibir los datos.</p>
+                        <a id="whatsapp-link" href="https://wa.me/584148581362?text=Hola%20quiero%20dar%20mi%20aporte%20social%20para%20los%20ni%C3%B1os" target="_blank" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-green-500 text-white hover:bg-green-600">
+                           <i class="fab fa-whatsapp mr-2"></i><span data-translate-key="donate_bs_button">Contactar por WhatsApp</span>
                         </a>
                     </div>
                 </div>
@@ -244,17 +249,17 @@
         <!-- ===== Quiénes Somos Section ===== -->
         <section id="quienes-somos" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="section-title"><strong>Corazón Detrás de la Misión</strong></h2>
-                <p class="section-subtitle">Somos un equipo pequeño con un gran compromiso, motivados por nuestras propias experiencias y un profundo amor por Venezuela.</p>
+                <h2 class="section-title"><strong data-translate-key="about_title">Corazón Detrás de la Misión</strong></h2>
+                <p class="section-subtitle" data-translate-key="about_subtitle">Somos un equipo pequeño con un gran compromiso, motivados por nuestras propias experiencias y un profundo amor por Venezuela.</p>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                     <div class="md:w-1/3 text-center reveal">
-                        <img src="https://i.imgur.com/Fd0Iv99.jpeg" alt="[Foto del Fundador]" class="rounded-2xl w-48 h-48 mx-auto mb-4 shadow-xl border-4 border-white object-cover">
-                        <h3 class="text-2xl font-bold text-gray-800">ROSTON DAVIS</h3>
-                        <p class="text-yellow-600 font-semibold">Fundador</p>
+                        <img src="https://i.imgur.com/ZzBfYgo.jpeg" alt="[Foto del Fundador]" class="rounded-2xl w-48 h-48 mx-auto mb-4 shadow-xl border-4 border-white object-cover">
+                        <h3 class="text-2xl font-bold text-gray-800">DRA. MARIANGELA TALY</h3>
+                        <p class="text-yellow-600 font-semibold" data-translate-key="founder_title">Fundadora</p>
                     </div>
                     <div class="md:w-2/3 reveal">
-                        <p class="text-lg mb-4 text-justify">"Habiendo crecido en Venezuela, conozco de primera mano las dificultades que enfrentan muchas familias. Vi a niños increíblemente talentosos y llenos de sueños, cuyas oportunidades se veían limitadas por no tener algo tan básico como un par de zapatos o un cuaderno."</p>
-                        <p class="text-lg text-justify">"Estamos conformando esta idea que será una fundación para ser el puente que yo hubiera deseado tener. No se trata de caridad, sino de solidaridad. Cada vez que visitamos una comunidad y entregamos la ayuda, no solo vemos gratitud, vemos esperanza renacer. Y esa es la energía que nos impulsa a seguir adelante."</p>
+                        <p class="text-lg mb-4 text-justify" data-translate-key="founder_text1">"Habiendo crecido en Venezuela, conozco de primera mano las dificultades que enfrentan muchas familias. Vi a niños increíblemente talentosos y llenos de sueños, cuyas oportunidades se veían limitadas por no tener algo tan básico como un par de zapatos o un cuaderno."</p>
+                        <p class="text-lg text-justify" data-translate-key="founder_text2">"Estamos conformando esta idea que será una fundación para ser el puente que yo hubiera deseado tener. No se trata de caridad, sino de solidaridad. Cada vez que visitamos una comunidad y entregamos la ayuda, no solo vemos gratitud, vemos esperanza renacer. Y esa es la energía que nos impulsa a seguir adelante."</p>
                     </div>
                 </div>
             </div>
@@ -265,14 +270,14 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <a href="#" class="text-2xl font-bold">Causa<span class="text-yellow-400">Infantil</span></a>
-            <p class="my-4 max-w-md mx-auto">Construyendo un futuro más brillante para los niños de Venezuela, una ayuda a la vez.</p>
+            <p class="my-4 max-w-md mx-auto" data-translate-key="footer_slogan">Construyendo un futuro más brillante para los niños de Venezuela, una ayuda a la vez.</p>
             <div class="flex justify-center space-x-6 my-6">
                 <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fab fa-facebook"></i></a>
                 <a href="#" class="text-2xl hover:text-yellow-400 transition-colors"><i class="fab fa-tiktok"></i></a>
             </div>
-            <p class="text-sm text-gray-400">&copy; 2025 Causa Infantil. Todos los derechos reservados.</p>
-            <p class="text-sm text-gray-500">Ciudad Bolívar, Venezuela.</p>
+            <p class="text-sm text-gray-400" data-translate-key="footer_copyright">&copy; 2025 Causa Infantil. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-500" data-translate-key="footer_location">Ciudad Bolívar, Venezuela.</p>
         </div>
     </footer>
 
@@ -280,14 +285,14 @@
     <div id="usdt-modal" class="fixed inset-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-75 hidden z-50">
         <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-md p-8 text-center relative">
             <button onclick="closeUsdtModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Donar con USDT (Red TRC20)</h3>
-            <p class="text-gray-600 mb-4 text-justify">Escanea el código QR o copia la dirección para realizar tu donación.</p>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4" data-translate-key="usdt_modal_title">Donar con USDT (Red TRC20)</h3>
+            <p class="text-gray-600 mb-4 text-justify" data-translate-key="usdt_modal_text">Escanea el código QR o copia la dirección para realizar tu donación.</p>
             <img id="qr-code" src="https://i.imgur.com/J8QqCnb.png" alt="[Código QR de la Wallet USDT]" class="mx-auto mb-4">
             <div class="bg-gray-100 p-3 rounded-lg break-all">
                 <p id="usdt-address" class="font-mono text-sm text-gray-800">TNmcjSPo87qfpzYw2ZQxbgvDXTN4XFAp3u</p>
             </div>
             <button id="copy-button" class="mt-4 bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
-                <i class="fas fa-copy mr-2"></i>Copiar Dirección
+                <i class="fas fa-copy mr-2"></i><span data-translate-key="usdt_modal_copy_button">Copiar Dirección</span>
             </button>
             <p id="copy-feedback" class="text-green-600 mt-2 h-4"></p>
         </div>
@@ -295,7 +300,7 @@
     
     <!-- Desktop Share Modal -->
     <div id="share-modal-desktop" class="hidden fixed top-20 right-20 bg-white rounded-lg shadow-2xl p-4 z-50 w-64">
-        <p class="font-semibold text-gray-800 mb-3">¡Comparte esta causa!</p>
+        <p class="font-semibold text-gray-800 mb-3" data-translate-key="share_modal_title">¡Comparte esta causa!</p>
         <div class="flex space-x-2 mb-3">
             <input id="share-url-input" type="text" readonly class="w-full px-2 py-1 border rounded bg-gray-100 text-sm">
             <button id="copy-share-link" class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"><i class="fas fa-copy"></i></button>
@@ -312,6 +317,180 @@
 
 
     <script>
+        // ===== Language Translation Logic =====
+        const translations = {
+            es: {
+                page_title: "Nuestra Causa - Transformando Futuros en Venezuela",
+                nav_mission: "Misión",
+                nav_cases: "Casos de Ayuda",
+                nav_transparency: "Transparencia",
+                nav_about: "Quiénes Somos",
+                nav_donate: "Donar Ahora",
+                nav_mission_mobile: "Misión",
+                nav_cases_mobile: "Casos de Ayuda",
+                nav_transparency_mobile: "Transparencia",
+                nav_about_mobile: "Quiénes Somos",
+                share_page_mobile: "Compartir Página",
+                change_lang_mobile: "Switch to English",
+                nav_donate_mobile: "Donar Ahora",
+                hero_title: "Tu Ayuda, Su Futuro.",
+                hero_subtitle: "Creamos puentes de esperanza para niños en comunidades vulnerables de Venezuela, entregando útiles, uniformes y apoyo médico.",
+                hero_cta1: "Quiero Ayudar",
+                hero_cta2: "Ver Casos",
+                mission_title: "Nuestra Razón de Ser",
+                mission_subtitle: "Creemos en el poder de la acción directa y la transparencia para generar un cambio real y duradero en la vida de los niños.",
+                our_mission_title: "Nuestra Misión",
+                our_mission_text: "Conectar la generosidad de personas de todo el mundo con las necesidades específicas y urgentes de niños en comunidades vulnerables de Venezuela, garantizando que cada contribución en útiles, uniformes o ayuda médica se entregue de manera directa y transparente.",
+                our_vision_title: "Nuestra Visión",
+                our_vision_text: "Ser un referente de confianza y eficacia en la ayuda social, donde cada niño tenga la oportunidad de desarrollar su potencial sin que la falta de recursos básicos sea un obstáculo, construyendo un futuro más justo y esperanzador para Venezuela, un niño a la vez.",
+                cases_title: "Historias que necesitan tu ayuda",
+                cases_subtitle: "Cada niño tiene un nombre, un sueño y una necesidad. Conoce sus historias y sé parte de la solución.",
+                case1_title: "Útiles para Luis",
+                case1_text: "Luis, de 8 años, sueña con ser ingeniero, pero no tiene los cuadernos ni lápices para ir a la escuela. Ayúdalo a seguir aprendiendo.",
+                case_donate_link: "Donar para este caso",
+                case2_title: "Uniformes para Ana",
+                case2_text: "Ana, de 6 años, no puede asistir a clases porque no tiene el uniforme escolar requerido. Una pequeña ayuda le abrirá las puertas del colegio.",
+                case_donate_link2: "Donar para este caso",
+                case3_title: "Ayuda Médica para Carlos",
+                case3_text: "Carlos, de 10 años, necesita un tratamiento médico para su asma que su familia no puede costear. Ayúdalo a respirar mejor y jugar sin límites.",
+                case_donate_link3: "Donar para este caso",
+                transparency_title: "Tu Ayuda en Acción",
+                transparency_subtitle: "La confianza es nuestro pilar. Aquí puedes ver exactamente cómo cada donación se convierte en una sonrisa y una oportunidad.",
+                transparency_case_title: "Ayudas Sociales - Julio 2025",
+                transparency_case_text: "Gracias a 2 donantes, logramos reparar un techo de un hogar donde viven 3 niños en una comunidad de Ciudad Bolívar. Ahora pueden dormir bajo un techo mas seguro.",
+                transparency_raised: "Total Recaudado: Unicamente Materiales.",
+                transparency_investment: "Inversión: Mano de Obra",
+                transparency_video_caption: "Video de la entrega de útiles en la comunidad.",
+                donate_title: "Formas de Ayudar",
+                donate_subtitle: "Tu donación, sin importar el tamaño, tiene un impacto directo. Elige el método que prefieras. ¡Gracias por tu generosidad!",
+                donate_paypal_title: "Donar con PayPal",
+                donate_paypal_text: "Usa tu cuenta de PayPal o tarjeta de crédito/débito para donaciones internacionales.",
+                donate_paypal_button: "Donar vía PayPal",
+                donate_crypto_title: "Donar con Cripto (USDT)",
+                donate_crypto_text: "Envía USDT (Tether) a través de la red TRC20. Bajas comisiones y sin intermediarios.",
+                donate_crypto_button: "Obtener Dirección USDT",
+                donate_bs_title: "Transferencia en Bolívares",
+                donate_bs_text: "Para transferencias en bolívares (Pago Móvil o bancaria), contacta para recibir los datos.",
+                donate_bs_button: "Contactar por WhatsApp",
+                about_title: "Corazón Detrás de la Misión",
+                about_subtitle: "Somos un equipo pequeño con un gran compromiso, motivados por nuestras propias experiencias y un profundo amor por Venezuela.",
+                founder_title: "Fundadora",
+                founder_text1: "\"Habiendo crecido en Venezuela, conozco de primera mano las dificultades que enfrentan muchas familias. Vi a niños increíblemente talentosos y llenos de sueños, cuyas oportunidades se veían limitadas por no tener algo tan básico como un par de zapatos o un cuaderno.\"",
+                founder_text2: "\"Estamos conformando esta idea que será una fundación para ser el puente que yo hubiera deseado tener. No se trata de caridad, sino de solidaridad. Cada vez que visitamos una comunidad y entregamos la ayuda, no solo vemos gratitud, vemos esperanza renacer. Y esa es la energía que nos impulsa a seguir adelante.\"",
+                footer_slogan: "Construyendo un futuro más brillante para los niños de Venezuela, una ayuda a la vez.",
+                footer_copyright: "© 2025 Causa Infantil. Todos los derechos reservados.",
+                footer_location: "Ciudad Bolívar, Venezuela.",
+                usdt_modal_title: "Donar con USDT (Red TRC20)",
+                usdt_modal_text: "Escanea el código QR o copia la dirección para realizar tu donación.",
+                usdt_modal_copy_button: "Copiar Dirección",
+                share_modal_title: "¡Comparte esta causa!",
+                whatsapp_predefined_text: "Hola quiero dar mi aporte social para los niños"
+            },
+            en: {
+                page_title: "Our Cause - Transforming Futures in Venezuela",
+                nav_mission: "Mission",
+                nav_cases: "Aid Cases",
+                nav_transparency: "Transparency",
+                nav_about: "About Us",
+                nav_donate: "Donate Now",
+                nav_mission_mobile: "Mission",
+                nav_cases_mobile: "Aid Cases",
+                nav_transparency_mobile: "Transparency",
+                nav_about_mobile: "About Us",
+                share_page_mobile: "Share Page",
+                change_lang_mobile: "Cambiar a Español",
+                nav_donate_mobile: "Donate Now",
+                hero_title: "Your Help, Their Future.",
+                hero_subtitle: "We build bridges of hope for children in vulnerable communities in Venezuela, delivering school supplies, uniforms, and medical support.",
+                hero_cta1: "I Want to Help",
+                hero_cta2: "View Cases",
+                mission_title: "Our Reason for Being",
+                mission_subtitle: "We believe in the power of direct action and transparency to generate real and lasting change in children's lives.",
+                our_mission_title: "Our Mission",
+                our_mission_text: "To connect the generosity of people from all over the world with the specific and urgent needs of children in vulnerable communities in Venezuela, ensuring that every contribution in school supplies, uniforms, or medical aid is delivered directly and transparently.",
+                our_vision_title: "Our Vision",
+                our_vision_text: "To be a benchmark of trust and efficiency in social aid, where every child has the opportunity to develop their potential without the lack of basic resources being an obstacle, building a fairer and more hopeful future for Venezuela, one child at a time.",
+                cases_title: "Stories That Need Your Help",
+                cases_subtitle: "Every child has a name, a dream, and a need. Get to know their stories and be part of the solution.",
+                case1_title: "Supplies for Luis",
+                case1_text: "Luis, 8, dreams of being an engineer, but he doesn't have the notebooks or pencils to go to school. Help him keep learning.",
+                case_donate_link: "Donate to this case",
+                case2_title: "Uniforms for Ana",
+                case2_text: "Ana, 6, cannot attend classes because she doesn't have the required school uniform. A little help will open the school doors for her.",
+                case_donate_link2: "Donate to this case",
+                case3_title: "Medical Aid for Carlos",
+                case3_text: "Carlos, 10, needs medical treatment for his asthma that his family cannot afford. Help him breathe better and play without limits.",
+                case_donate_link3: "Donate to this case",
+                transparency_title: "Your Help in Action",
+                transparency_subtitle: "Trust is our pillar. Here you can see exactly how every donation turns into a smile and an opportunity.",
+                transparency_case_title: "Social Aid - July 2025",
+                transparency_case_text: "Thanks to 2 donors, we were able to repair a roof of a home where 3 children live in a community in Ciudad Bolívar. Now they can sleep under a safer roof.",
+                transparency_raised: "Total Raised: Materials Only.",
+                transparency_investment: "Investment: Labor",
+                transparency_video_caption: "Video of the school supplies delivery in the community.",
+                donate_title: "Ways to Help",
+                donate_subtitle: "Your donation, no matter the size, has a direct impact. Choose the method you prefer. Thank you for your generosity!",
+                donate_paypal_title: "Donate with PayPal",
+                donate_paypal_text: "Use your PayPal account or credit/debit card for international donations.",
+                donate_paypal_button: "Donate via PayPal",
+                donate_crypto_title: "Donate with Crypto (USDT)",
+                donate_crypto_text: "Send USDT (Tether) via the TRC20 network. Low fees and no intermediaries.",
+                donate_crypto_button: "Get USDT Address",
+                donate_bs_title: "Transfer in Bolivares",
+                donate_bs_text: "For transfers in Bolivares (Pago Móvil or bank), contact us to get the details.",
+                donate_bs_button: "Contact via WhatsApp",
+                about_title: "The Heart Behind the Mission",
+                about_subtitle: "We are a small team with a big commitment, motivated by our own experiences and a deep love for Venezuela.",
+                founder_title: "Founder",
+                founder_text1: "\"Having grown up in Venezuela, I know firsthand the difficulties many families face. I saw incredibly talented and dream-filled children whose opportunities were limited by not having something as basic as a pair of shoes or a notebook.\"",
+                founder_text2: "\"We are shaping this idea that will become a foundation to be the bridge I wished I had. It's not about charity, but solidarity. Every time we visit a community and deliver aid, we see not just gratitude, but hope reborn. And that is the energy that drives us forward.\"",
+                footer_slogan: "Building a brighter future for the children of Venezuela, one aid at a time.",
+                footer_copyright: "© 2025 Causa Infantil. All rights reserved.",
+                footer_location: "Ciudad Bolívar, Venezuela.",
+                usdt_modal_title: "Donate with USDT (TRC20 Network)",
+                usdt_modal_text: "Scan the QR code or copy the address to make your donation.",
+                usdt_modal_copy_button: "Copy Address",
+                share_modal_title: "Share this cause!",
+                whatsapp_predefined_text: "Hello, I want to make a social contribution for the children"
+            }
+        };
+
+        let currentLang = 'es';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-translate-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-translate-key');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            // Update WhatsApp link with the correct language message
+            const whatsappLink = document.getElementById('whatsapp-link');
+            const whatsappText = encodeURIComponent(translations[lang].whatsapp_predefined_text);
+            whatsappLink.href = `https://wa.me/584148581362?text=${whatsappText}`;
+        }
+
+        function toggleLanguage() {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            setLanguage(newLang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('en')) {
+                setLanguage('en');
+            } else {
+                setLanguage('es');
+            }
+            
+            document.getElementById('lang-switcher-desktop').addEventListener('click', toggleLanguage);
+            document.getElementById('lang-switcher-mobile').addEventListener('click', toggleLanguage);
+        });
+
+
         // ===== Mobile Menu Toggle =====
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -351,10 +530,10 @@
             textArea.select();
             try {
                 document.execCommand('copy');
-                copyFeedback.innerText = '¡Dirección copiada!';
+                copyFeedback.innerText = currentLang === 'es' ? '¡Dirección copiada!' : 'Address copied!';
             } catch (err) {
                 console.error('Fallback: Oops, unable to copy', err);
-                copyFeedback.innerText = 'Error al copiar';
+                copyFeedback.innerText = currentLang === 'es' ? 'Error al copiar' : 'Error copying';
             }
             document.body.removeChild(textArea);
             setTimeout(() => { copyFeedback.innerText = ''; }, 2000);
@@ -400,9 +579,9 @@
             urlInput.select();
             try {
                 document.execCommand('copy');
-                document.getElementById('desktop-copy-feedback').innerText = '¡Enlace copiado!';
+                document.getElementById('desktop-copy-feedback').innerText = currentLang === 'es' ? '¡Enlace copiado!' : 'Link copied!';
             } catch (err) {
-                document.getElementById('desktop-copy-feedback').innerText = 'Error al copiar.';
+                document.getElementById('desktop-copy-feedback').innerText = currentLang === 'es' ? 'Error al copiar.' : 'Error copying.';
             }
             setTimeout(() => { document.getElementById('desktop-copy-feedback').innerText = ''; }, 2000);
         });
