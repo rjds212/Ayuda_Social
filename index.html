@@ -119,7 +119,7 @@
         <!-- ===== Misión y Visión Section ===== -->
         <section id="mision" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Nuestra Razón de Ser</h2>
+                <h2 class="section-title"><strong>Nuestra Razón de Ser</strong></h2>
                 <p class="section-subtitle">Creemos en el poder de la acción directa y la transparencia para generar un cambio real y duradero en la vida de los niños.</p>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="reveal">
@@ -142,7 +142,7 @@
         <!-- ===== Casos de Ayuda Section ===== -->
         <section id="casos" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Historias que necesitan tu ayuda</h2>
+                <h2 class="section-title"><strong>Historias que necesitan tu ayuda</strong></h2>
                 <p class="section-subtitle">Cada niño tiene un nombre, un sueño y una necesidad. Conoce sus historias y sé parte de la solución.</p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Caso 1 -->
@@ -179,7 +179,7 @@
         <!-- ===== Transparencia Section ===== -->
         <section id="transparencia" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Tu Ayuda en Acción</h2>
+                <h2 class="section-title"><strong>Tu Ayuda en Acción</strong></h2>
                 <p class="section-subtitle">La confianza es nuestro pilar. Aquí puedes ver exactamente cómo cada donación se convierte en una sonrisa y una oportunidad.</p>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6 reveal">
@@ -206,12 +206,12 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Formas de Ayudar</h2>
                 <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Tu donación, sin importar el tamaño, tiene un impacto directo. Elige el método que prefieras. ¡Gracias por tu generosidad!</p>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <!-- PayPal Card -->
                     <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center justify-center reveal">
                         <i class="fab fa-paypal text-5xl text-blue-400 mb-4"></i>
                         <h3 class="text-2xl font-bold mb-2">Donar con PayPal</h3>
-                        <p class="mb-6 text-gray-300 text-justify">Usa tu cuenta de PayPal o tarjeta de crédito/débito. Un método rápido y seguro.</p>
+                        <p class="mb-6 text-gray-300 text-center">Usa tu cuenta de PayPal o tarjeta de crédito/débito para donaciones internacionales.</p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_donations">
                             <input type="hidden" name="business" value="martinamericaunite@gmail.com">
@@ -224,8 +224,18 @@
                     <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center justify-center reveal">
                         <i class="fas fa-coins text-5xl text-green-400 mb-4"></i>
                         <h3 class="text-2xl font-bold mb-2">Donar con Cripto (USDT)</h3>
-                        <p class="mb-6 text-gray-300 text-justify">Envía USDT (Tether) a través de la red TRC20 (Tron). Bajas comisiones y sin intermediarios.</p>
+                        <p class="mb-6 text-gray-300 text-center">Envía USDT (Tether) a través de la red TRC20. Bajas comisiones y sin intermediarios.</p>
                         <button onclick="openUsdtModal()" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-green-500 text-white hover:bg-green-400">Obtener Dirección USDT</button>
+                    </div>
+                     <!-- Bolivares Card -->
+                    <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center justify-center reveal">
+                        <span class="text-6xl mb-4">🇻🇪</span>
+                        <h3 class="text-2xl font-bold mb-2">Transferencia en Bolívares</h3>
+                        <p class="mb-6 text-gray-300 text-center">Para transferencias en bolívares (Pago Móvil o bancaria), contacta para recibir los datos.</p>
+                        <!-- FIX: Added predefined message to WhatsApp link -->
+                        <a href="https://wa.me/584148581362?text=Hola%20quiero%20dar%20mi%20aporte%20social%20para%20los%20ni%C3%B1os" target="_blank" class="inline-block px-8 py-3 rounded-full font-semibold transition duration-300 bg-green-500 text-white hover:bg-green-600">
+                           <i class="fab fa-whatsapp mr-2"></i>Contactar por WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -234,11 +244,10 @@
         <!-- ===== Quiénes Somos Section ===== -->
         <section id="quienes-somos" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">El Corazón Detrás de la Misión</h2>
+                <h2 class="section-title"><strong>Corazón Detrás de la Misión</strong></h2>
                 <p class="section-subtitle">Somos un equipo pequeño con un gran compromiso, motivados por nuestras propias experiencias y un profundo amor por Venezuela.</p>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                     <div class="md:w-1/3 text-center reveal">
-                        <!-- FIX: Changed from rounded-full to rounded-2xl to avoid distortion -->
                         <img src="https://i.imgur.com/Fd0Iv99.jpeg" alt="[Foto del Fundador]" class="rounded-2xl w-48 h-48 mx-auto mb-4 shadow-xl border-4 border-white object-cover">
                         <h3 class="text-2xl font-bold text-gray-800">ROSTON DAVIS</h3>
                         <p class="text-yellow-600 font-semibold">Fundador</p>
